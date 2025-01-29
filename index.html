@@ -1,30 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Solution</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind -->
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
-    <style type="text/tailwindcss">
-        @theme {
-          --color-clifford: #da373d;
-          --color-clifford: #da373d;
-          --color-clifford: #da373d;
-        }
-      </style>
+    <!-- ✅ Google Fonts: Poppins & EB Garamond -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ✅ Load Tailwind and DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- ✅ Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: "#da373d",
+                        "button-primary": "#B68C5A",
+                        "sec-font": "#707070",
+                    },
+                    fontFamily: {
+                        poppins: ["Poppins", "sans-serif"],
+                        garamond: ["EB Garamond", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
-    <header>
+    <header class="w-11/12 mx-auto">
+        <!-- navbar -->
+        <div class="navbar bg-base-100 font-poppins p-0 m-0">
+            <div class="navbar-start sticky top-0">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li>
+                            <details>
+                                <summary>Services</summary>
+                                <ul class="p-2">
+                                    <li><a>Law</a></li>
+                                    <li><a>Human Rights</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Cases</summary>
+                                <ul class="p-2">
+                                    <li><a>Murder</a></li>
+                                    <li><a>Divorce</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Blog</summary>
+                                <ul class="p-2">
+                                    <li><a>International Law</a></li>
+                                    <li><a>Land New Law</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Contact Us</summary>
+                                <ul class="p-2">
+                                    <li><a>Mobile</a></li>
+                                    <li><a>Email</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+                <img class="" src="./images/logo2.png" alt="">
+            </div>
+            <div class="navbar-center hidden lg:flex text-sec-color">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li>
+                        <details>
+                            <summary>Services</summary>
+                            <ul class="p-2">
+                                <li><a>Law</a></li>
+                                <li><a>Human Rights</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Cases</summary>
+                            <ul class="p-2">
+                                <li><a>Murder</a></li>
+                                <li><a>Divorce</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Blog</summary>
+                            <ul class="p-2">
+                                <li><a>International Law</a></li>
+                                <li><a>Land New Law</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Contact Us</summary>
+                            <ul class="p-2">
+                                <li><a>Mobile</a></li>
+                                <li><a>Email</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-button-primary text-white font-bold">Free Consultation</a>
+            </div>
+        </div>
+
+        <!-- hero banner -->
+        <div class="hero min-h-screen rounded-lg mt-8" style="background-image: url(./images/banner.png);">
+            <div class="hero-overlay bg-opacity-0"></div>
+            <div class="hero-content text-white text-center font-poppins">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold font-garamond">We Provide Effective Legal Solutions</h1>
+                    <p class="mb-5 text-4">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                        exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <div class="md:flex block md:gap-3">
+                        <input type="text" placeholder="Search your services"
+                            class="bg-white h-12 rounded-lg p-2 w-[300px] md:m-0 m-2">
+                        <button class="btn btn-primary bg-button-primary w-36 border-0 text-white">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </header>
     <main>
-        <h1>Saklain Mostak Sakib</h1>
+
     </main>
     <footer>
 
